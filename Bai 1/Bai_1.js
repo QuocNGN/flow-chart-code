@@ -59,7 +59,6 @@ function findMaxDigits(n) {
   while (n > 0) {
     // Lấy chữ số cuối cùng của 'num' bằng phép chia lấy dư cho 10.
     let digit = n % 10;
-    debugger
     if (digit > max) {
       max = digit;
     }
