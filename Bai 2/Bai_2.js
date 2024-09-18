@@ -91,7 +91,6 @@ function isPrime(num) {
   }
 
   for (let i = 2; i <= Math.sqrt(num); i++) {
-    debugger
     if (num % i === 0) {
       return false; // Nếu num chia hết cho i, nó không phải số nguyên tố.
     }
@@ -101,17 +100,15 @@ function isPrime(num) {
 
 function findPrimesInRange(arr) {
   let primes = []; // Mảng để lưu các số nguyên tố.
+  let index = 0;
 
   for (let i = 0; i < arr.length; i++) {
     if (isPrime(arr[i])) {
-      // Kiểm tra xem số arr[i] có phải số nguyên tố không.
-      primes.push(arr[i]); // Nếu là số nguyên tố, thêm vào mảng primes.
+      primes[index] = arr[i];
+      index++;
     }
   }
 
-  return primes; // Trả về mảng các số nguyên tố.
+  return primes; 
 }
-
-// Ví dụ sử dụng
-let numbers = [10, 15, 3, 7, 11, 20, 13, 17];
-console.log(findPrimesInRange(numbers));
+console.log(findPrimesInRange([10, 15, 3, 7, 11, 20, 13, 17])); // [3, 7 ,11, 13, 17]
