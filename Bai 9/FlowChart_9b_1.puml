@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Declare arr as an empty list;
+
+:For i = 0 to length of str - 1;
+repeat
+    :Append str[i] to arr;
+
+repeat while (i < length of str);
+
+:For i = 0 to length of arr - 2;
+repeat
+    :For j = i + 1 to length of arr - 1;
+    repeat
+        :If arr[i] > arr[j] then;
+        if (arr[i] > arr[j]) then (yes)
+            :Declare temp = arr[i];
+            :arr[i] = arr[j];
+            :arr[j] = temp;
+        endif
+    repeat while (j < length of arr);
+
+repeat while (i < length of arr - 1);
+
+:Return join arr into a string;
+
+stop
+@enduml

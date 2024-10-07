@@ -1,0 +1,21 @@
+@startuml
+start
+
+:Assume max = arr[0][0];
+
+:For i = 0 to length of arr - 1;
+repeat
+    :For j = 0 to length of arr[i] - 1;
+    repeat
+        :If arr[i][j] > max then;
+        if (arr[i][j] > max) then (yes)
+            :max = arr[i][j];
+        endif
+    repeat while (j < length of arr[i]);
+
+repeat while (i < length of arr);
+
+:Return max;
+
+stop
+@enduml

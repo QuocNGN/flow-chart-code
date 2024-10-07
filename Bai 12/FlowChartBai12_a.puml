@@ -1,0 +1,23 @@
+@startuml
+start
+
+:initialize max = arr[0][0];
+:initialize loop i = 0;
+
+while (i < length of arr?) is (yes)
+    :initialize loop j = 0;
+
+    while (j < length of arr[i]?) is (yes)
+        if (arr[i][j] > max?) then (yes)
+            :max = arr[i][j];
+        endif
+        :j++;
+    endwhile
+
+    :i++;
+endwhile
+
+:return max;
+
+stop
+@enduml
