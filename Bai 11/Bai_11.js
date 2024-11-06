@@ -32,7 +32,7 @@ function findMinIndex(arr) {
 //*==================================================//
 //* c) Tìm và in ra tổng các phần tử trong mảng.
 //*================================================//
-function sumArray(arr) {
+function sumOfArray(arr) {
     let sum = 0; // Biến để lưu tổng các phần tử
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i]; // Cộng từng phần tử vào tổng

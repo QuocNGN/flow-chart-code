@@ -7,42 +7,42 @@
 //*===================================//
 //* a) Tính và in ra tổng từ 1 đến n.
 //*===================================//
-function sumTonN(n) {
+function sumToN(number) {
   let sum = 0;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= number; i++) {
     sum += i;
   }
 
   return sum;
 }
-console.log(sumTonN(4));
+console.log(sumToN(4));
 
 //*===================================//
 //* b) Tính tổng các ước số của n.
 //*===================================//
-function sumUocSo(n) {
+function sumOfDivisors(number) {
   let sum = 0;
-  for (let i = 1; i <= n; i++) {
+  for (let i = 1; i <= number; i++) {
     if (i % 2 === 0) {
       sum += i;
     }
   }
   return sum;
 }
-console.log(sumUocSo(6));
+console.log(sumOfDivisors(6));
 
 //*===================================//
 //* c) Tính tổng các chữ số của n.
 //*===================================//
-function findTotalSum(n) {
+function findTotalSum(number) {
   let sum = 0;
   
   // Duyệt qua từng chữ số của n
-  while (n > 0) {
-    let lastDigit = n % 10; // Lấy chữ số cuối cùng
+  while (number > 0) {
+    let lastDigit = number % 10; // Lấy chữ số cuối cùng
     sum += lastDigit;       // Cộng chữ số cuối vào tổng
     // n = (n - (n % 10)) / 10;
-    n = Math.floor(n / 10);  // Bỏ chữ số cuối cùng của n 
+    number = Math.floor(number / 10);  // Bỏ chữ số cuối cùng của n 
   }
 
   return sum;
@@ -53,17 +53,17 @@ console.log(findTotalSum(123));  // Output: 6
 //*===================================//
 //* d) Tìm chữ số lớn nhất của n.
 //*===================================//
-function findMaxDigits(n) {
+function findMaxDigits(number) {
   let max = 0;
 
-  while (n > 0) {
+  while (number > 0) {
     // Lấy chữ số cuối cùng của 'num' bằng phép chia lấy dư cho 10.
-    let digit = n % 10;
+    let digit = number % 10;
     if (digit > max) {
       max = digit;
     }
     // Cập nhật 'num' bằng cách bỏ đi chữ số cuối cùng (chia cho 10 và lấy phần nguyên).
-    n = Math.floor(n / 10);
+    number = Math.floor(number / 10);
   }
   return max;
 }
